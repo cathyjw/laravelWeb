@@ -39,8 +39,14 @@ Route::get('/', function () {
 //    
 //});
 
-Route::get('/update', function(){
-    
-    $result = DB::update('update posts set title = "Update First Post" where id = ?', [1]);
+//Route::get('/update', function(){
+//    
+//    $result = DB::update('update posts set title = "Update First Post" where id = ?', [1]);
+//    return $result;
+//});
+
+Route::get('/delete', function(){
+   
+    $result = DB::delete('delete from posts where id = ?', [1]);
     return $result;
 });
