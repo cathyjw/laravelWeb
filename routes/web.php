@@ -108,3 +108,13 @@ Route::get('/', function () {
 //   return $post;
 //   
 //});
+
+//Route::get('/restore', function(){
+//    
+//    Post::withTrashed()->where('is_admin', 0)->restore();
+//    
+//});
+
+Route::get('/forcedelete', function(){
+   Post::onlyTrashed()-> where('is_admin',0)->forcedelete();
+});
