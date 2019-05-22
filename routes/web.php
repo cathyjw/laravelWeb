@@ -96,3 +96,15 @@ Route::get('/', function () {
 //    Post::where('is_admin',0)->delete();
 //    
 //});
+
+//Route::get('/softdelete', function(){
+//    Post::find(4)->delete();
+//});
+
+//Route::get('/readsoftdelete', function(){
+//    
+//   $post = Post::withTrashed()->where('is_admin',0)->get();
+//   $post = Post::onlyTrashed()->where('is_admin',0)->get();
+//   return $post;
+//   
+//});
