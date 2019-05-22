@@ -1,5 +1,6 @@
 <?php
 
+use App\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,8 +46,53 @@ Route::get('/', function () {
 //    return $result;
 //});
 
-Route::get('/delete', function(){
-   
-    $result = DB::delete('delete from posts where id = ?', [1]);
-    return $result;
-});
+//
+
+
+/*
+|--------------------------------------------------------------------------
+| ELOQUENT DATABASE MODEL
+|--------------------------------------------------------------------------
+*/
+
+//Route::get('/read', function(){
+//    $posts = Post::all();
+//    
+//    foreach($posts as $post){
+//        return $post->title;
+//    }
+//});
+
+//Route::get('/find', function(){
+//    $post = Post::find(2);
+//    
+//    
+//    return $post->title;
+//    
+//});
+
+
+//Route::get('/updatedata', function(){
+//   $post = Post::find(2);
+//   $post->title = "Welcome";
+//   $post->body = "Welcome to Laravel world!";
+//   
+//   $post->save();
+//});
+
+
+//Route::get('/create', function(){
+//    Post::create(['title'=>'Eloquent', 'body'=>'https://laravel.com/docs/5.8/eloquent']);
+//});
+
+//Route::get('/delete',function(){
+//   $post = Post::find(1);
+//   $post->delete();
+//});
+
+//Route::get('/delete2',function(){
+//    Post::destory(3);
+//    Post::destory([4,5]);
+//    Post::where('is_admin',0)->delete();
+//    
+//});
