@@ -14,3 +14,33 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Pass data
+//Route::get('/post/{id}','PostController@index');
+
+//Route::resource('posts','PostController');
+//
+//Route::get('/contact','PostController@contact');
+//Route::get('/post/{id}/{name}/{password}','PostController@show_post');
+
+//Route::get('/insert', function(){
+//    
+//    DB::insert('insert into posts(title, body) values(?,?)',['First Post', 'Laravel PHP']);
+//    
+//});
+
+//Route::get('/read', function(){
+//    
+//    $results = DB::select('select * from posts where id = ?', [1]);
+//    
+//    foreach($results as $result){
+//        return $result->body;
+//    }
+//    
+//});
+
+Route::get('/update', function(){
+    
+    $result = DB::update('update posts set title = "Update First Post" where id = ?', [1]);
+    return $result;
+});

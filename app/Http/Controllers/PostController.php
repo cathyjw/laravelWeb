@@ -14,6 +14,7 @@ class PostController extends Controller
     public function index()
     {
         //
+        return "Index method";
     }
 
     /**
@@ -46,6 +47,7 @@ class PostController extends Controller
     public function show($id)
     {
         //
+        return "This is show method" . $id;
     }
 
     /**
@@ -80,5 +82,14 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function contact() {
+        $people = ['Bob', 'Jack', 'Tom', 'Jim'];
+        return view('contact', compact('people'));
+    }
+    
+    public function show_post($id,$name,$password) {
+        return view('post', compact('id','name','password'));
     }
 }
